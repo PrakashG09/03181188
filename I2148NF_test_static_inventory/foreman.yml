@@ -1,0 +1,5 @@
+validate_certs: false 
+plugin: redhat.satellite.foreman
+strict: yes
+want_params: true
+use_extra_vars: true

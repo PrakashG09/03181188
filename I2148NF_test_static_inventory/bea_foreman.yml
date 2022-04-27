@@ -1,0 +1,8 @@
+validate_certs: false 
+plugin: redhat.satellite.foreman
+strict: yes
+want_params: true
+keyed_groups:
+  - key: sat6_groups | dict2items() | selectattr("value", "equalto", "true") | map(attribute='key') |list
+    separator: ''
+host_filters: params.sat6_env="build" and params.sat6_orga_bea=true
